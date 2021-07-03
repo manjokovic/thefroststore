@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div id="image-slider" class="splide">
+	<div class="splide__track">
+		<ul class="splide__list">
+			<li class="splide__slide">
+				<img class="img-fluid" src="{%static 'img/tfs_img/MenuPic8.png' %}">
+			</li>
+			<li class="splide__slide">
+				<img src="{%static 'img/tfs_img/MenuPic7.png' %}">
+			</li>
+			<li class="splide__slide">
+				<img src="{%static 'img/tfs_img/MenuPic6.png' %}">
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="splide__progress">
+	<div class="splide__progress__bar">
+	</div>
+</div>
+</div>
+<script>
+    document.addEventListener( 'DOMContentLoaded', function () {
+	new Splide( '#image-slider' ).mount();
+    } );
+</script>
+
+{% endblock %}
